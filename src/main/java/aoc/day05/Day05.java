@@ -100,13 +100,13 @@ public class Day05 implements Day {
             int source = Integer.parseInt(arr[3]);
             int dest = Integer.parseInt(arr[5]);
             for(int i = 0; i < Integer.parseInt(arr[1]); i++){
-                array.get(dest-1).push(array.get(source-1).pop());
+                test.get(dest-1).push(test.get(source-1).pop());
             }
 
         }
         StringBuilder res = new StringBuilder();
-        for (int i = 0; i < array.size(); i++){
-            res.append(array.get(i).peek());
+        for (int i = 0; i < test.size(); i++){
+            res.append(test.get(i).peek());
         }
         return res.toString();
     }
@@ -122,20 +122,20 @@ public class Day05 implements Day {
             int dest = Integer.parseInt(arr[5]);
             if (times > 1){
                 for(int i = 0; i < Integer.parseInt(arr[1]); i++){
-                    temp.push(array.get(source-1).pop());
+                    temp.push(test.get(source-1).pop());
                 }
                 for(int i = 0; i < Integer.parseInt(arr[1]); i++){
-                    array.get(dest-1).push(temp.pop());
+                    test.get(dest-1).push(temp.pop());
                 }
 
             }
             else{
-                array.get(dest-1).push(array.get(source-1).pop());
+                test.get(dest-1).push(test.get(source-1).pop());
             }
         }
         StringBuilder res = new StringBuilder();
-        for (int i = 0; i < array.size(); i++){
-            res.append(array.get(i).peek());
+        for (int i = 0; i < test.size(); i++){
+            res.append(test.get(i).peek());
         }
         return res.toString();
     }

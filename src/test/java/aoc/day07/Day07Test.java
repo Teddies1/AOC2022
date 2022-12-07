@@ -1,4 +1,4 @@
-package aoc.day06;
+package aoc.day07;
 
 import org.junit.Test;
 
@@ -8,32 +8,32 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class Day06Test {
+public class Day07Test {
 
     @Test
     public void testPart1(){
         // Given
         List<String> input = List.of(
-                "mjqjpqmgbljsphdztnvjfqwrcgsmlb");
+                "A Y", "B X","C Z");
 
 
         // When
-        String result = new Day06().part1(input);
+        String result = new Day07().part1(input);
 
         // Then
-        assertEquals("7", result);
+        assertEquals("15", result);
     }
 
     @Test
     public void testPart2(){
         // Given
         List<String> input = List.of(
-                "mjqjpqmgbljsphdztnvjfqwrcgsmlb");
+                "A Y", "B X","C Z");
 
         // When
-        String result = new Day06().part2(input);
+        String result = new Day07().part2(input);
 
         // Then
-        assertEquals("19", result);
+        assertEquals("12", result);
     }
 }
